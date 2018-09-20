@@ -16,7 +16,7 @@ import { TabNames } from '../../utils/tab-names';
 import { TabDescription } from '../../../server/reporting/tab-description';
 
 import {
-  metricsGeneral,  
+  metricsGeneral,
   metricsAudit,
   metricsVulnerability,
   metricsScap,
@@ -158,6 +158,7 @@ app.controller('overviewController', function(
 
   const calculateWodleTagFromTab = tab => {
     if (tab === 'aws') return 'aws-s3';
+    if (tab === 'vuls') return 'vulnerability-detector';
     return false;
   };
 
